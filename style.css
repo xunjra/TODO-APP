@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f1f0ed;
+    color: #222;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+
+.todo-form {
+    background: white;
+    padding: 20px;
+    border: 2px solid #222;
+    box-shadow: 5px 5px 0 #222;
+    margin-bottom: 35px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 2px solid #222;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input:focus {
+    background: #fafafa;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    border: 2px solid #222;
+}
+
+#submitBtn {
+    background: #c2c2ed;
+    padding: 0 18px;
+}
+
+#submitBtn:hover {
+    background: #aaaade;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 21px;
+}
+
+#taskCount {
+    font-size: 13px;
+    color: #777;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter {
+    background: transparent;
+    padding: 7px 14px;
+    border: 1px solid #aaa;
+    font-size: 13px;
+}
+
+.filter.active {
+    background: #222;
+    color: white;
+    border-color: #222;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: white;
+    border: 2px solid #222;
+    margin-bottom: 12px;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.complete-btn {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    background: white;
+    border: 2px solid #222;
+    font-size: 12px;
+}
+
+.task.completed .complete-btn {
+    background: #94cdf7;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #f1f0ed;
+}
+
+.delete-btn {
+    background: #e5bdbd;
+}
+
+#emptyMessage {
+    text-align: center;
+    padding: 35px 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 35px 15px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #submitBtn {
+        padding: 12px;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+
+    .task-text {
+        min-width: 60%;
+    }
+}
