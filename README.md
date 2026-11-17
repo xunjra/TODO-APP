@@ -42,13 +42,13 @@ todo-app/
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/xunjra/todo-app.git
+git clone https://github.com/xunjra/TODO-APP.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd todo-app
+cd TODO-APP
 ```
 
 3. Open `index.html` in your browser.
